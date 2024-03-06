@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    color: white;
+}
+
+h1 {
+    color: goldenrod;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    color: goldenrod;
+    margin-top: 1rem;
+}
+
+#iconos {
+    vertical-align: middle;
+    width: 60%;
+    height: auto;
+    margin-top: 3rem;
+}
