@@ -17,7 +17,7 @@ function turno_pc() {
 for (let i = 0; i < num_jugadas; i++) {
     let pc = turno_pc();
     let respuesta = prompt("Ingrese: Piedra, Papel o Tijera");
-    if (respuesta === "Piedra" || respuesta === "Papel" || respuesta === "Tijera") {
+    if (respuesta.toLowerCase() === "piedra" || respuesta.toLowerCase() === "papel" || respuesta.toLowerCase() === "tijera") {
         let resultado = "";
 
         switch (true) {
