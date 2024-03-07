@@ -5,28 +5,28 @@ function turno_pc() {
     let num_random = Math.floor(Math.random() * 3);
     let pc = "";
     if (num_random === 0) {
-        pc = "Piedra";
+        pc = "piedra";
     } else if (num_random === 1) {
-        pc = "Papel";
+        pc = "papel";
     } else {
-        pc = "Tijera";
+        pc = "tijera";
     }
     return pc;
 }
 
 for (let i = 0; i < num_jugadas; i++) {
     let pc = turno_pc();
-    let respuesta = prompt("Ingrese: Piedra, Papel o Tijera");
-    if (respuesta.toLowerCase() === "piedra" || respuesta.toLowerCase() === "papel" || respuesta.toLowerCase() === "tijera") {
+    let respuesta = prompt("Ingrese: Piedra, Papel o Tijera").toLowerCase();
+    if (respuesta === "piedra" || respuesta === "papel" || respuesta === "tijera"){
         let resultado = "";
 
         switch (true) {
             case respuesta === pc:
                 resultado = "¡Empate!";
                 break;
-            case respuesta === "Piedra" && pc === "Tijera":
-            case respuesta === "Papel" && pc === "Piedra":
-            case respuesta === "Tijera" && pc === "Papel":
+            case respuesta === "piedra" && pc === "tijera":
+            case respuesta === "papel" && pc === "piedra":
+            case respuesta === "tijera" && pc === "papel":
                 resultado = "¡Partida Ganada!";
                 break;
             default:
